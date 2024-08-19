@@ -102,7 +102,6 @@ getgenv().hbu = {
         FOVControl = {
             Settings = {
                 ScopeMode = "Dynamic", -- Options: "Static", "Dynamic"
-                Color = Color3.new(0.741176, 0.631373, 0.145098),
                 Zones = {
                     DynamicFieldOfView = {Value = 100},
                     SilentScope = {
