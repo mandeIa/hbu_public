@@ -30,7 +30,7 @@ getgenv().hbu = {
                         Settings = {
                             Prediction = {
                                 Activation = true,
-                                Multiplier = {X = 0.119 , Y = 0.133}
+                                Multiplier = 0.119
                             },
                         }
                     },
@@ -43,7 +43,7 @@ getgenv().hbu = {
                         }
                     },
                     GroundImpactAvoidance = {
-                        Active = true,
+                        Active = false,
                         Threshold = {Value = 0.15}
                     }
                 }
@@ -60,7 +60,7 @@ getgenv().hbu = {
                     HotKey = "C",
                     PredictiveLogic = {
                         Enabled = true,
-                        Factor = {X = 0.123, Y = 0.109, Z = 0.08}
+                        Factor = 0.11299513513
                     }
                 },
                 Control = {
@@ -69,7 +69,7 @@ getgenv().hbu = {
                 },
                 AerialShots = {
                     SmoothFactor = {
-                        GroundSmooth = 0.025
+                        GroundSmooth = 0.035
                     }
                 },
                 Stability = {
@@ -101,26 +101,26 @@ getgenv().hbu = {
         },
         FOVControl = {
             Settings = {
-                ScopeMode = "Dynamic", -- Options: "Static", "Dynamic"
+                ScopeMode = "Static", -- Options: "Static", "Dynamic"
                 Zones = {
                     DynamicFieldOfView = {Value = 100},
                     SilentScope = {
-                        Visibility = true,
+                        Visibility = false,
                         FillState = true,
                         RadiusSize = {Value = 100},
-                        Color = Color3.fromRGB(37, 121, 189)
+						Color = Color3.fromRGB(255,255,255)
                     },
                     AimAssistScope = {
                         Visibility = false,
                         FillState = true,
                         RadiusSize = {Value = 85},
-                        Color = Color3.fromRGB(255, 0, 0)
+						Color = Color3.fromRGB(255,255,255)
                     },
                     DynamicRadiusScope = {
                         Visibility = false,
                         FillState = false,
                         RadiusSize = {Value = 100},
-                        Color = Color3.fromRGB(255, 255, 255)
+						Color = Color3.fromRGB(255,255,255)
                     }
                 }
             }
