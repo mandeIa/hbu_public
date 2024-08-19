@@ -7,7 +7,7 @@ getgenv().hbu = {
                 FFA_State = true,
                 Authorization = {
                     License = "License",
-                    Version = {1,0,0}
+                    Version = {1.1}
                 },
                 OffsetConfig = {
                     Active = false,
@@ -24,29 +24,26 @@ getgenv().hbu = {
                 BulletTrajectory = {
                     Enabled = true,
                     HitDetection = {
-                        TargetParts = {"Head", "Torso"},
+                        TargetParts = {"Head", "Chest"},
                         Strategy = "NearestPoint", -- Options: "None" , "NearestPoint", "NearestPart"
                         Strategy_Mode = "1", -- Options: "1", "2"
                         Settings = {
                             Prediction = {
                                 Activation = true,
-                                Multiplier = 0.115
+                                Multiplier = {X = 0.119 , Y = 0.133}
                             },
-                            Accuracy = {
-                                Chance = 100
-                            }
                         }
                     },
                     CursorRelation = true,
                     VisualFeedback = {
                         Active = true,
                         Customization = {
-                            SizeFactor = {Value = 2.5},
+                            SizeFactor = {Value = 5},
 							Color = Color3.fromRGB(255,255,255)
                         }
                     },
                     GroundImpactAvoidance = {
-                        Active = false,
+                        Active = true,
                         Threshold = {Value = 0.15}
                     }
                 }
@@ -54,16 +51,16 @@ getgenv().hbu = {
         },
         Assistive = {
             Module = {
-                TargetParts = {"Head", "Torso"},
+                TargetParts = {"Head", "Chest"},
                 ActivationState = true,
                 DynamicZoneState = false,
-                GetNearestPartOnTargetToCursor = false,
+                GetNearestPartOnTargetToCursor = true,
                 Guarding = {
                     Safety = true,
                     HotKey = "C",
                     PredictiveLogic = {
                         Enabled = true,
-                        Factor = 0.123
+                        Factor = {X = 0.123, Y = 0.109, Z = 0.08}
                     }
                 },
                 Control = {
@@ -79,9 +76,9 @@ getgenv().hbu = {
                     JitterControl = {
                         Active = true,
                         Axis = {
-                            X_Axis = {Value = 5},
-                            Y_Axis = {Value = 5},
-                            Z_Axis = {Value = 5}
+                            X_Axis = {Value = 7.5},
+                            Y_Axis = {Value = 7.5},
+                            Z_Axis = {Value = 7.5}
                         }
                     },
                 }
@@ -104,11 +101,11 @@ getgenv().hbu = {
         },
         FOVControl = {
             Settings = {
-                ScopeMode = "Static", -- Options: "Static", "Dynamic"
+                ScopeMode = "Dynamic", -- Options: "Static", "Dynamic"
                 Zones = {
                     DynamicFieldOfView = {Value = 100},
                     SilentScope = {
-                        Visibility = false,
+                        Visibility = true,
                         FillState = true,
                         RadiusSize = {Value = 100}
                     },
@@ -131,21 +128,12 @@ getgenv().hbu = {
                 Loadout = {
                     DoubleBarrel = {
                         ScopeArc = {Value = 100},
-                        AccuracyFactor = {
-                            Chance = {Value = 100}
-                        },
                     },
                     Revolver = {
                         ScopeArc = {Value = 100},
-                        AccuracyFactor = {
-                            Chance = {Value = 100}
-                        },
                     },
                     TacticalSG = {
                         ScopeArc = {Value = 100},
-                        AccuracyFactor = {
-                            Chance = {Value = 100}
-                        },
                     }
                 }
             },
