@@ -17,7 +17,7 @@ getgenv().hbu = {
                     }
                 },
                 TargetingMode = {
-                    Primary = "Target", -- Options: "Target", "FOV"
+                    Primary = "FOV", -- Options: "Target", "FOV"
                 }
             },
             Predictive = {
@@ -25,18 +25,18 @@ getgenv().hbu = {
                     Enabled = true,
                     HitDetection = {
                         TargetParts = {"Head", "Chest"},
-                        Strategy = "NearestPoint", -- Options: "None" , "NearestPoint", "NearestPart"
+                        Strategy = "NearestPart", -- Options: "None" , "NearestPoint", "NearestPart"
                         Strategy_Mode = "1", -- Options: "1", "2"
                         Settings = {
                             Prediction = {
                                 Activation = true,
-                                Multiplier = 0.119
+                                Multiplier = {XFactor = 0.1091, YFactor = 0.1}
                             },
                         }
                     },
                     CursorRelation = true,
                     VisualFeedback = {
-                        Active = true,
+                        Active = false,
                         Customization = {
                             SizeFactor = {Value = 5},
 							Color = Color3.fromRGB(255,255,255)
@@ -60,7 +60,7 @@ getgenv().hbu = {
                     HotKey = "C",
                     PredictiveLogic = {
                         Enabled = true,
-                        Factor = 0.11299513513
+                        Factor = 0.11799513513
                     }
                 },
                 Control = {
@@ -69,7 +69,7 @@ getgenv().hbu = {
                 },
                 AerialShots = {
                     SmoothFactor = {
-                        GroundSmooth = 0.035
+                        GroundSmooth = 0.01985121245
                     }
                 },
                 Stability = {
@@ -87,12 +87,12 @@ getgenv().hbu = {
         Validation = {
             SafetyChecks = {
                 Barriers = {
-                    WallDetection = false,
-                    VisibilityCheck = false,
+                    WallDetection = true,
+                    VisibilityCheck = true,
                     ForceFieldDetection = false
                 },
                 TeamStatus = {
-                    AllyCheck = false,
+                    AllyCheck = true,
                     HealthStatus = true,
                     FriendRecognition = false,
                     GroupCheck = false
@@ -107,13 +107,13 @@ getgenv().hbu = {
                     SilentScope = {
                         Visibility = false,
                         FillState = true,
-                        RadiusSize = {Value = 100},
+                        RadiusSize = {Value = 16.5},
 						Color = Color3.fromRGB(255,255,255)
                     },
                     AimAssistScope = {
                         Visibility = false,
                         FillState = true,
-                        RadiusSize = {Value = 85},
+                        RadiusSize = {Value = 14},
 						Color = Color3.fromRGB(255,255,255)
                     },
                     DynamicRadiusScope = {
