@@ -17,20 +17,20 @@ getgenv().hbu = {
                     }
                 },
                 TargetingMode = {
-                    Primary = "FOV", -- Options: "Target", "FOV"
+                    Primary = "Target", -- Options: "Target", "FOV"
                 }
             },
             Predictive = {
                 BulletTrajectory = {
                     Enabled = true,
                     HitDetection = {
-                        TargetParts = {"Head", "Chest"},
-                        Strategy = "NearestPart", -- Options: "None" , "NearestPoint", "NearestPart"
+                        TargetParts = {"Chest"},
+                        Strategy = "None", -- Options: "None" , "NearestPoint", "NearestPart"
                         Strategy_Mode = "1", -- Options: "1", "2"
                         Settings = {
                             Prediction = {
                                 Activation = true,
-                                Multiplier = {XFactor = 0.1091, YFactor = 0.1}
+                                Multiplier = {XFactor = 0.1121, YFactor = 0.1}
                             },
                         }
                     },
@@ -51,10 +51,10 @@ getgenv().hbu = {
         },
         Assistive = {
             Module = {
-                TargetParts = {"Head", "Chest"},
+                TargetParts = {"Chest"},
                 ActivationState = true,
                 DynamicZoneState = false,
-                GetNearestPartOnTargetToCursor = true,
+                GetNearestPartOnTargetToCursor = false,
                 Guarding = {
                     Safety = true,
                     HotKey = "C",
@@ -69,7 +69,7 @@ getgenv().hbu = {
                 },
                 AerialShots = {
                     SmoothFactor = {
-                        GroundSmooth = 0.01985121245
+                        GroundSmooth = 1
                     }
                 },
                 Stability = {
@@ -105,15 +105,15 @@ getgenv().hbu = {
                 Zones = {
                     DynamicFieldOfView = {Value = 100},
                     SilentScope = {
-                        Visibility = false,
+                        Visibility = true,
                         FillState = true,
-                        RadiusSize = {Value = 16.5},
+                        RadiusSize = {Value = 50},
 						Color = Color3.fromRGB(255,255,255)
                     },
                     AimAssistScope = {
                         Visibility = false,
                         FillState = true,
-                        RadiusSize = {Value = 14},
+                        RadiusSize = {Value = 50},
 						Color = Color3.fromRGB(255,255,255)
                     },
                     DynamicRadiusScope = {
