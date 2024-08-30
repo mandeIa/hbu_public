@@ -3,7 +3,6 @@ getgenv().hbu = {
         MainOps = {
             VelocityDynamics = "Normal",
             Framework = {
-                Status = true,
                 FFA_State = true,
                 Authorization = {
                     License = "License",
